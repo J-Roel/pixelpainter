@@ -1,0 +1,121 @@
+/*--DEFAULTS--*/
+body{
+  margin:0;
+} 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grow {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.gcontainer {
+  padding-left:15px;
+  padding-right:15px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 750px;
+}
+.gcol-1s, .gcol-2s, .gcol-3s, .gcol-4s, .gcol-5s, .gcol-6s, .gcol-7s, .gcol-8s, .gcol-9s, .gcol-10s, .gcol-11s, .gcol-12s, .gcol-1n, .gcol-2n, .gcol-3n, .gcol-4n, .gcol-5n, .gcol-6n, .gcol-7n, .gcol-8n, .gcol-9n, .gcol-10n, .gcol-11n, .gcol-12n {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gcol-1s, .gcol-2s, .gcol-3s, .gcol-4s, .gcol-5s, .gcol-6s, .gcol-7s, .gcol-8s, .gcol-9s, .gcol-10s, .gcol-11s, .gcol-12s {
+  float: left;
+}
+.gcol-1s {
+  width: 8.333333333%;
+}
+.gcol-2s {
+  width: 16.666666666%;
+}
+.gcol-3s {
+  width: 25%;
+}
+.gcol-4s {
+  width: 33.333333333%;
+}
+.gcol-5s {
+  width: 41.666666666%;
+}
+.gcol-6s {
+  width: 50%;
+}
+.gcol-7s {
+  width: 58.333333333%;
+}
+.gcol-8s {
+  width: 66.666666666%;
+}
+.gcol-9s {
+  width: 0.75%;
+}
+.gcol-10s {
+  width: 83.333333333%;
+}
+.gcol-11s {
+  width: 91.666666666%;
+}
+.gcol-12s {
+  width: 100%;
+}
+@media(min-width:768px) {
+  .gcontainer {
+    width: 1170px;
+  }
+  .gcol-1n, .gcol-2n, .gcol-3n, .gcol-4n, .gcol-5n, .gcol-6n, .gcol-7n, .gcol-8n, .gcol-9n, .gcol-10n, .gcol-11n, .gcol-12n {
+    float: left;
+  }
+  .gcol-1n {
+    width: 8.333333333%;
+  }
+  .gcol-2n {
+    width: 16.666666666%;
+  }
+  .gcol-3n {
+    width: 25%;
+  }
+  .gcol-4n {
+    width: 33.333333333%;
+  }
+  .gcol-5n {
+    width: 41.666666666%;
+  }
+  .gcol-6n {
+    width: 50%;
+  }
+  .gcol-7n {
+    width: 58.333333333%;
+  }
+  .gcol-8n {
+    width: 66.666666666%;
+  }
+  .gcol-9n {
+    width: 75%;
+  }
+  .gcol-10n {
+    width: 83.333333333%;
+  }
+  .gcol-11n {
+    width: 91.666666666%;
+  }
+  .gcol-12n {
+    width: 100%;
+  }
+}
+
+
+.gbg-danger {
+  background-color: red;
+}
+
+.gbg-text-info {
+  background-color: #CCC;
+  border: 1px solid #444;
+  box-shadow: 1px 1px 3px #444;
+}

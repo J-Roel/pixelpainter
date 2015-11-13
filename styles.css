@@ -1,0 +1,86 @@
+/*
+	STYLES.CSS
+*/
+body {
+	line-height: 0;
+	background: rgb(247,251,252);
+	background: -moz-linear-gradient(-45deg,  rgba(247,251,252,1) 0%, rgba(217,237,242,1) 70%, rgba(192,220,226,1) 100%);
+	background: -webkit-linear-gradient(-45deg,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 70%,rgba(192,220,226,1) 100%);
+	background: linear-gradient(135deg,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 70%,rgba(192,220,226,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#c0dce2',GradientType=1 );
+
+}
+header {
+	background: #000;
+	float:left;
+	width: 100%;
+	box-shadow: 2px 2px 8px 4px #444;
+}
+footer {
+	background: #000;
+	float:left;
+	width: 100%;
+	box-shadow: 2px 2px 8px 4px #444;
+	min-height: 50px;
+}
+header h1 {
+	padding: 0.25em;
+	font-size: 2em;
+	color: #fff;
+}
+
+.pixel {
+	box-sizing:border-box;
+	display: inline-block;
+	width:30px;
+	height:30px;
+	border:1px solid #000;
+	border-radius: 4px;
+}
+.canvas {
+	float:left;
+	max-width: 780px;
+	min-width: 780px;
+	max-height: 700px;
+	min-height: 600px;
+	margin:2em;
+}
+.palette {
+	display:block;
+	min-width: 100px;
+	margin-top:2em;
+}
+
+.color {
+	box-sizing:border-box;
+	display:inline-block;
+	width: 25px;
+	height: 25px;
+}
+/*----------------------------STRUCTURE*/
+
+.wrapper {
+	margin: auto;
+	width:90%;
+}
+row:after, 
+row:before {
+	clear:both;
+}
+
+
+button {
+	margin:1em;
+	padding:0.5xem;
+}
+
+
+
+
+
+
+
+
+
+
+/*End of file*/
