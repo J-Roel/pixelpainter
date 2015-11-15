@@ -40,14 +40,14 @@ header h1 {
 .pixel {
 	box-sizing:border-box;
 	display: inline-block;
-	width:25px;
-	height:25px;
+	width:20px;
+	height:20px;
 	border:1px solid #000;
 	border-radius: 4px;
 }
 .canvas {
 	/*float:left;*/
-	
+
 }
 .canvasScroll{
 	width: 820px;
@@ -91,6 +91,7 @@ button {
 	display: inline-block;
 	padding:0.75em;
 	border-radius: 10px;
+	margin-top:0.25em;
 background: rgb(179,220,237);
 background: -moz-linear-gradient(-45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
 background: -webkit-linear-gradient(-45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
