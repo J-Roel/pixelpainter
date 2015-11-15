@@ -1,13 +1,20 @@
 /*
 	STYLES.CSS
 */
+
+
+/*Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+
+
 body {
 	line-height: 0;
-	background: rgb(247,251,252);
-	background: -moz-linear-gradient(-45deg,  rgba(247,251,252,1) 0%, rgba(217,237,242,1) 70%, rgba(192,220,226,1) 100%);
-	background: -webkit-linear-gradient(-45deg,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 70%,rgba(192,220,226,1) 100%);
-	background: linear-gradient(135deg,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 70%,rgba(192,220,226,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#c0dce2',GradientType=1 );
+background: rgb(30,87,153);
+background: -moz-linear-gradient(45deg,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%);
+background: -webkit-linear-gradient(45deg,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+background: linear-gradient(45deg,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
 
 }
 header {
@@ -21,9 +28,10 @@ footer {
 	float:left;
 	width: 100%;
 	box-shadow: 2px 2px 8px 4px #444;
-	min-height: 50px;
+	min-height: 25px;
 }
 header h1 {
+	font-family: 'Indie Flower', cursive;
 	padding: 0.25em;
 	font-size: 2em;
 	color: #fff;
@@ -32,19 +40,26 @@ header h1 {
 .pixel {
 	box-sizing:border-box;
 	display: inline-block;
-	width:30px;
-	height:30px;
+	width:25px;
+	height:25px;
 	border:1px solid #000;
 	border-radius: 4px;
 }
 .canvas {
-	float:left;
-	max-width: 780px;
-	min-width: 780px;
-	max-height: 700px;
-	min-height: 600px;
-	margin:2em;
+	/*float:left;*/
+	
 }
+.canvasScroll{
+	width: 820px;
+	height: 600px;
+	margin-top:2em;
+	margin-bottom: 2em;
+	overflow:scroll;
+	float:left;
+	box-shadow: -1px -1px 2px 1px #444, 1px 1px 2px 1px #444;
+	background-color: #fff;
+}
+.mColor { margin-top: 2em;}
 .palette {
 	display:block;
 	min-width: 100px;
@@ -52,10 +67,13 @@ header h1 {
 }
 
 .color {
+	margin: 3px;
 	box-sizing:border-box;
 	display:inline-block;
-	width: 25px;
-	height: 25px;
+	width: 35px;
+	height: 35px;
+	border-radius:50%;
+	box-shadow: 1px 1px 4px 1px #444;
 }
 /*----------------------------STRUCTURE*/
 
@@ -70,14 +88,48 @@ row:before {
 
 
 button {
+	display: inline-block;
+	padding:0.75em;
+	border-radius: 10px;
+background: rgb(179,220,237);
+background: -moz-linear-gradient(-45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -webkit-linear-gradient(-45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+background: linear-gradient(135deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 );
+
+}
+
+input {
+	display:inline-block;
 	margin:1em;
-	padding:0.5xem;
+	padding:0.25em;
+	border-radius: 10px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+ul li {
+	list-style: none;
 }
 
 
+/*TYPE*/
+p {
+	display: inline-block;
+	font-size: 1em
 
+}
 
-
+/*DECO*/
+hr {
+	margin-top: 1em;
+	margin-bottom:1em;
+	width:100%;
+	background: -moz-linear-gradient(left,  rgba(179,220,237,0) 0%, rgba(143,177,203,1) 10%, rgba(0,4,68,1) 50%, rgba(150,180,204,1) 90%, rgba(188,224,238,0) 100%);
+	background: -webkit-linear-gradient(left,  rgba(179,220,237,0) 0%,rgba(143,177,203,1) 10%,rgba(0,4,68,1) 50%,rgba(150,180,204,1) 90%,rgba(188,224,238,0) 100%);
+	background: linear-gradient(to right,  rgba(179,220,237,0) 0%,rgba(143,177,203,1) 10%,rgba(0,4,68,1) 50%,rgba(150,180,204,1) 90%,rgba(188,224,238,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b3dced', endColorstr='#00bce0ee',GradientType=1 );
+}
 
 
 

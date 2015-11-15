@@ -21,29 +21,44 @@
 
 		<main>
 
-			<div class="wrapper row">
+			<div class="wrapper grow">
+				
 				<div class="gcol-2n">
 					<div id="palette" class="palette">
 						<!-- Contains our color palette generated in js.js -->
 					</div>
 					<div class="mColor">
 						<button id="customColor">Custom...</button>
-						<hr/>
-						<button id="cClear">Clear</button>
-						<button id="toggleGrid">Toggle Grid</button>
-						<hr/>
-						<button id="cMode1">Paint</button>
-						<button id="cEraser">Eraser</button>
-						<button id="cMode2">Roller</button>
-						<button id="cMode3">Box</button>
-					</div>
-				</div>
-				<div clas="gcol-10n">
-					<div id="canvas" class="canvas">
-						<!--Place our canvas here in js.js-->
 					</div>
 				</div>
 				
+				<div clas="gcol-8n">
+					<div class="canvasScroll">
+						<div id="canvas" class="canvas">
+							<!--Place our canvas here in js.js-->
+						</div>
+					</div>
+				</div>
+
+				<div class="gcol-2n">
+					<div class="mColor">
+							<p>X:</p><input placeholder="30" type="text" name="gridx" id="gridx" style="width:40px;">
+							<p>Y:</p><input placeholder="30" type="text" name="gridy" id="gridy" style="width:40px;">
+							<button id="makeGrid" style="width:100%;">Make Grid</button>
+						<hr/>
+							<button id="toggleGrid">Toggle Grid</button>
+							<button id="cClear">Clear</button>
+							
+						
+						<hr/>
+							<button id="cMode1">Paint</button>
+							<button id="cEraser">Eraser</button>
+							<button id="cMode2">Roller</button>
+							<button id="cMode3">Box</button></li>
+						
+					</div>
+				</div>
+
 			</div><!-- End Wrapper -->
 
 		</main>
