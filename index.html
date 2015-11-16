@@ -23,39 +23,48 @@
 
 			<div class="wrapper grow">
 				
-				<div class="gcol-2n">
+				<div class="gcol-3n">
 					<div id="palette" class="palette">
 						<!-- Contains our color palette generated in js.js -->
 					</div>
-					<div class="mColor">
-						<button id="customColor">Custom...</button>
-					</div>
+					<button style="margin:20px;" id="customColor">Custom...</button>	
+
+					
+
 				</div>
 				
-				<div clas="gcol-8n">
+				<div clas="gcol-9n">
+					<div id="tools">
+						<button id="cMode1" class="tool"><img src="images/brush.png"></button>
+						<button id="cEraser" class="tool"><img src="images/eraser.png"></button>
+						<button id="cMode2" class="tool"><img src="images/bucket.png"></button>
+						<button id="cMode3"class="tool"><img src="images/box.png"></button>
+						<h3> ~ </h3>
+						<button id="zoom" class="tool"><img src="images/zoom.png"></button>
+						<button id="toggleGrid" class="tool"><img src="images/grid.png"></button>
+						<h3> ~ </h3>
+						<button id="toggleShadow"class="tool"><img src="images/toggleShadow.png"></button>
+						<button id="cMode4"class="tool"><img src="images/shadow.png"></button>
+						<h3> ~ </h3>
+						<button id="options"class="tool"><img src="images/options.png"></button>
+
+							<div id="mSlider">
+								<p>X:</p><input placeholder="---" type="text" name="gridx" id="gridx" style="width:40px;">
+								<p>Y:</p><input placeholder="---" type="text" name="gridy" id="gridy" style="width:40px;">
+								<button id="makeGrid" style="width:100%;">Make Grid</button>
+								<button id="cClear"  style="width:100%;">Clear</button>
+							</div>
+
+						
+					</div>
+					
 					<div class="canvasScroll">
 						<div id="canvas" class="canvas">
 							<!--Place our canvas here in js.js-->
 						</div>
 					</div>
-				</div>
 
-				<div class="gcol-2n">
-					<div class="mColor">
-							<p>X:</p><input placeholder="---" type="text" name="gridx" id="gridx" style="width:40px;">
-							<p>Y:</p><input placeholder="---" type="text" name="gridy" id="gridy" style="width:40px;">
-							<button id="makeGrid" style="width:100%;">Make Grid</button>
-							<button id="cClear" style="width:100%;">Clear</button>
-						<hr/>
-							<button id="toggleGrid" style="width:100%;">Toggle Grid</button>
-							<button id="zoom" style="width:100%;">Zoom</button>
-						<hr/>
-							<button id="cMode1">Paint</button>
-							<button id="cEraser">Eraser</button>
-							<button id="cMode2">Roller</button>
-							<button id="cMode3">Box</button></li>
-						
-					</div>
+					
 				</div>
 
 			</div><!-- End Wrapper -->
@@ -63,7 +72,7 @@
 		</main>
 
 		<footer>
-			<h3></h3>
+			<h3>Created by Jeremy Roelfs</h3>
 		</footer>
 
 		<script src="js.js" type="text/javascript"></script>

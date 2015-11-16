@@ -17,7 +17,7 @@ window.onload = function(){ //program contianer function
 	var colors = document.getElementsByClassName('color'); //all of the color elements
 	var canvas = document.getElementById("canvas"); //the parent of our pixels
 	var pixels = document.getElementsByClassName('pixel'); //all of the pixel elements
-	var zoom = 25;
+	var zoom = 48;
 	var cPalette = [ '#33FFFF','#33FFCC','#33FF99','#33FF66','#33FF33','#33FF00'
 					,'#33CCFF','#33CCCC','#33CC99','#33CC66','#33CC33','#33CC00'
 					,'#3399FF','#3399CC','#339999','#339966','#339933','#339900'
@@ -128,7 +128,7 @@ window.onload = function(){ //program contianer function
 		console.log(event);
 		if (event.which === 1) {
 			
-			if(event.target.className === "pixel") //check to see if we clicked on a pixel
+			if(event.target.className === "pixel" || event.target.className === "pixel pixShadow" ) //check to see if we clicked on a pixel
 			{
 				switch(colorMode)//Switch between our colorMode to determine what action to take
 				{
@@ -137,11 +137,13 @@ window.onload = function(){ //program contianer function
 						event.target.style.borderRadius = "0";
  						event.target.style.backgroundColor = curColor;
  						break;
+ 					case 2://Shadow
 
  					case 5: //Eraser
 						event.target.style.backgroundColor = '';
 						event.target.style.border = "1px solid #000";
 						event.target.style.borderRadius = "4px";
+						event.target.className = 'pixel';
 						break;
  				}
 
@@ -193,6 +195,22 @@ window.onload = function(){ //program contianer function
 			colorMode = 5;
 	});
 
+	//Listner function... open our options menu
+	var cOptions = document.getElementById('options');
+	cOptions.addEventListener('click', function f() {
+			var mySlider = document.getElementById('mSlider');
+			console.log("Pre: " , mySlider);
+
+			if(mySlider.style.display == 'none')
+			{
+				mySlider.style.display = 'visible';
+				console.log(mySlider.style.display);
+			} else {
+				mySlider.style.display = 'none';
+				console.log(mySlider.style.display);
+			}
+	});
+
 
 	//CLEAR PICTURE
 	//just loops through the canvas elements and changes them back
@@ -204,7 +222,8 @@ window.onload = function(){ //program contianer function
 		{
 			pixels[i].style.backgroundColor = '';
 			pixels[i].style.border = "1px solid #000";
-			pixels[i].style.borderRadius = "4px";			
+			pixels[i].style.borderRadius = "4px";
+			pixels[i].className = 'pixel';			
 		}
 	});
 
@@ -216,28 +235,48 @@ window.onload = function(){ //program contianer function
 	var toggleGrid = document.getElementById('toggleGrid');
 	toggleGrid.addEventListener('click', function customColor(event) {
 		
-
 		var chk ='';
-		for(var i = 0; i <= pixels.length;i++) {
+		for(var i = 0; i <= pixels.length-1;i++) {
 			chk = pixels[i].style.border; //get style.border info from pixel
 			
 			if(chk == "none") //if the pixel border style is set to none we know they are off.
 			{	
-				console.log("adding"); //So we add them.
 					if(pixels[i].style.backgroundColor == '') //check of there's no background
 					{	 	
-						//don't want to mess with elements that are painted.
 						pixels[i].style.border = "1px solid #000"; //add the border
 						pixels[i].style.borderRadius = "4px";
 					}
 			} else {	
-				console.log("removing");
 					pixels[i].style.border = "none";
 					pixels[i].style.borderRadius = "0";
 			}
 		}
 
 	});
+
+
+	//TOGGLE SHADOW
+	//Same as the toggle grid, we are just applying a box-shadow to the style if it
+	//has a backgroundColor
+	var toggleShadow = document.getElementById('toggleShadow');
+	toggleShadow.addEventListener('click', function toggleShadow(event) {
+		
+		var chk ='';
+		for(var i = 0; i <= pixels.length-1;i++) {
+			chk = pixels[i]; //get style.border info from pixel
+			if(chk.style.backgroundColor != '')
+			{
+				if(chk.className != 'pixel pixShadow') //check if there's a shadow background
+				{	 	
+					chk.className = 'pixel pixShadow';
+				} else {
+					chk.className = 'pixel';
+				}
+			}
+		}
+
+	});
+
 
 	//ZOOM --------------------------------------------------------------
 	//pretty straight forward function.... has break points to zoom in
@@ -249,12 +288,11 @@ window.onload = function(){ //program contianer function
 
 			
 			switch(zoom) {
-				case 10: zoom = 10; break;
-				case 15: zoom = 25; break;
-				case 25: zoom = 35; break;
-				case 35: zoom = 45; break;
-				case 45: zoom = 55; break;
-				case 55: zoom = 15; break;
+				case 8: zoom = 16; break;
+				case 16: zoom = 32; break;
+				case 32: zoom = 48; break;
+				case 48: zoom = 64; break;
+				case 64: zoom = 8; break;
 				default: zoom = 25;
 			}
 			
