@@ -120,6 +120,7 @@ window.onload = function(){ //program contianer function
 		//different functions.
 		addToPalette(str); 
 	});
+					
 
 
 	//MOUSE ACTION TO CHANGE THE PIXELS  ---------------------------
@@ -135,8 +136,17 @@ window.onload = function(){ //program contianer function
 					case 1://Paint
 						event.target.style.border = "none";
 						event.target.style.borderRadius = "0";
- 						event.target.style.backgroundColor = curColor;
+ 							event.target.style.backgroundColor = curColor;
+ 						
+ 						
+
+
+
+
  						break;
+ 					
+
+
  					case 2://Shadow
 
  					case 5: //Eraser
